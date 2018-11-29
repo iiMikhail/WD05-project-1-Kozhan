@@ -1,20 +1,24 @@
 extends ../../layouts/ui-layout/ui-layout.pug
+include ../../mixins/_buttons.pug
 
 block variables
-	- var title = 'Кнопки - UI-kit и HTML фреймворк - Документация';
+	- var title = 'Кнопки - Документация';
 	- var pageClass = 'body--dashboard';
 
 block content
 	.main-wrapper
 		.container.container--left.user-content.pt-35
 			h1 Кнопки
-			
+
 			.section-ui
-				+button('Текст кнопки', '#!')
+				+button('Предыдущий пост', '#!')
+			.section-ui
+				+button('Опубликовать', '#!').button--primary
 			pre.
-				+button('Текст кнопки', '#!')
+				+button('Предыдущий пост', '#!')
+				+button('Опубликовать', '#!').button--primary
 			
-			.title mixins/_buttons.pug
+			.title buttons.pug
 			pre.
 				mixin button(text, link)
 					a(class="button" href= link)&attributes(attributes) #{text}

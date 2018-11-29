@@ -1,0 +1,23 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+include ../../mixins/_nav.pug
+
+block variables
+	- var title = 'Шапка для сайта - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Шапка для сайта
+			.section-ui
+				include ../../sections/header.pug
+			pre.
+				include ../../sections/header.pug
+			.title header.pug
+			pre.
+				.header
+				include logo.pug
+				include header-nav.pug
+
+				
+
