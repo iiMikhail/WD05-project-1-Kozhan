@@ -1,0 +1,27 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+include ../../mixins/_buttons.pug
+include ../../mixins/_textarea.pug
+
+
+block variables
+	- var title = 'Форма комментарования - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			.section-ui
+			h1 Форма комментирования
+			
+				include ../../sections/leave-comment.pug
+			pre.
+				include ../../sections/leave-comment.pug
+			
+			.title leave-comment.pug
+			pre.
+				.leave-comment
+					.leave-comment__title Оставить комментарий
+					form.leave-comment__plate
+						+textarea('Я тоже там был, вот мои впечатления.')
+						+button('Опубликовать', '#!').button--primary
+

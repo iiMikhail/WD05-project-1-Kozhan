@@ -1,0 +1,22 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+include ../../mixins/_nav.pug
+
+block variables
+	- var title = 'Логотип - Документация';
+	- var pageClass = 'body--dashboard dark-bg';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Логотип
+			.section-ui
+				include ../../sections/logo.pug
+			pre.
+				include ../../sections/logo.pug
+			.title logo.pug
+			pre.
+				.logo.pug
+				.logo Блог о путешествиях
+
+				
+

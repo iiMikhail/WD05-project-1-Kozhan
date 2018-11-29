@@ -1,0 +1,25 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+include ../../mixins/_buttons.pug
+
+block variables
+	- var title = 'Кнопки - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Кнопки
+
+			.section-ui
+				+button('Предыдущий пост', '#!')
+			.section-ui
+				+button('Опубликовать', '#!').button--primary
+			pre.
+				+button('Предыдущий пост', '#!')
+				+button('Опубликовать', '#!').button--primary
+			
+			.title buttons.pug
+			pre.
+				mixin button(text, link)
+					a(class="button" href= link)&attributes(attributes) #{text}
+

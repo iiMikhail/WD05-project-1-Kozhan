@@ -1,0 +1,25 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+include ../../mixins/_buttons.pug
+include ../../mixins/_textarea.pug
+
+
+block variables
+	- var title = 'Текстареа - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Текстареа
+			+textarea("Я тоже там был, вот мои впечатления")
+
+			.section-ui
+				include ../../mixins/_textarea.pug
+			pre.
+				+textarea("Я тоже там был, вот мои впечатления")
+			
+			.title textarea.pug
+			pre.
+				mixin textarea (placeholder)
+				textarea.textarea(placeholder=placeholder)
+
